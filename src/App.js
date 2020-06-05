@@ -10,10 +10,17 @@ import ArticlesContainer from "./Containers/ArticlesContainer";
 function App() {
   return (
     <div>
-      <NavBar />
-      <Route exact path="/" component={() => <JobSearchContainer />} />
-      <Route exact path="/creatives" component={() => <ArticlesContainer />} />
-      <Route exact path="/about" component={() => <AboutContainer />} />
+      <Router>
+        <NavBar />
+        <br></br>
+        <Route exact path="/" component={() => <JobSearchContainer />} />
+        <Route
+          exact
+          path="/creatives"
+          component={() => <ArticlesContainer />}
+        />
+        <Route exact path="/about" component={() => <AboutContainer />} />
+      </Router>
     </div>
   );
 }
