@@ -1,0 +1,28 @@
+.JobContainerL {
+  width: 30%;
+  background-color: white;
+  overflow: scroll;
+  height: 80vh;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  padding: 15px;
+}
+
+.JobContainerR {
+  width: 30%;
+  background-color: white;
+  overflow: scroll;
+  height: 80vh;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+/* .border {
+  padding: 0px 0px 0px 50px;
+  flex-direction: row;
+  float: left;
+} */

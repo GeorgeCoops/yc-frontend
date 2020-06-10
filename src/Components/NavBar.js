@@ -1,15 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import styles from "../css/NavBar.module.css";
+
 export default function NavBar() {
   return (
-    <div>
-      <Link to={"/"}>jobs</Link>
-      <br></br>
-      <Link to={"/creatives"}>creatives</Link>
-      <br></br>
-      <Link to={"/about"}>about</Link>
-      <br></br>
+    <div className={styles.navBar}>
+      <div className={styles.logo}>Y</div>
+      <Link className={styles.linkStyle} to={"/about"}>
+        about
+      </Link>
+      <Link className={styles.linkStyle} to={"/post"}>
+        post
+      </Link>
+      {/* <Link className={styles.linkStyle} to={"/creatives"}>
+        creatives
+      </Link> */}
+      <Link className={styles.linkStyle} to={"/"}>
+        jobs
+      </Link>
     </div>
   );
 }
