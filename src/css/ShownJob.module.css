@@ -1,0 +1,11 @@
+.ShownJob {
+  background-color: white;
+  flex: right;
+  width: 700px;
+  height: 80vh;
+  overflow: scroll;
+}
+
+.spreeder {
+  padding: 0px 0px 0px 300px;
+}

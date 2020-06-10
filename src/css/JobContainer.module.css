@@ -1,0 +1,15 @@
+.JobContainer {
+  width: 30%;
+  /* border-radius: 25px; */
+  background-color: white;
+  padding: 15px;
+  overflow: scroll;
+  height: 80vh;
+  min-width: 200px;
+}
+
+.spreader {
+  padding: 0px 0px 0px 15px;
+  overflow: hidden;
+  display: flex;
+}

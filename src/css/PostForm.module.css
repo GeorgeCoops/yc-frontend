@@ -1,0 +1,13 @@
+.form {
+  text-align: left;
+  background-color: white;
+  padding: 30px;
+  width: 40%;
+  display: inline-block;
+  border-radius: 5px;
+  line-height: 5px;
+}
+
+.formWrapper {
+  text-align: center;
+}
