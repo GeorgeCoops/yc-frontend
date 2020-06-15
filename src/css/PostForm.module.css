@@ -11,3 +11,11 @@
 .formWrapper {
   text-align: center;
 }
+
+.imageUpload {
+  float: right;
+}
+
+.radioBtn {
+  float: left;
+}

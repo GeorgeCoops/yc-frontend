@@ -9,11 +9,13 @@
 }
 
 .shownText {
+  float: right;
   color: white;
   padding: 35px;
   background-color: #1a1a1a;
   border-radius: 10px 0px 0px 10px;
   height: 95%;
+  width: 400px;
 }
 
 .header {
@@ -46,10 +48,11 @@
   height: 70vh;
   width: 70vh;
   position: absolute;
-  /* padding: 0 0 0 200px; */
+  object-fit: cover;
   z-index: 2;
   top: 13%;
   left: 33%;
+  filter: brightness(115%);
 }
 
 .line {
@@ -71,10 +74,6 @@
 
 .description {
   font-size: x-small;
-}
-
-.images {
-  width: 400px;
 }
 
 .icons {

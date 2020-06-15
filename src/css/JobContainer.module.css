@@ -62,13 +62,11 @@
 }
 
 .display {
-  /* float: right; */
   border-radius: 3px;
   width: 60%;
   background-color: white;
   height: 35px;
   margin: 0 0 10px 0;
-  /* display: inline-block; */
 }
 
 .currentlyShowing {
@@ -85,4 +83,8 @@
   font-family: "Roboto";
   font-weight: 600;
   padding: 13px 4px 0 0;
+}
+
+.modalWidth {
+  width: 25px;
 }

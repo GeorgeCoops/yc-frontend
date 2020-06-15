@@ -21,6 +21,7 @@ export default class PostForm extends React.Component {
     facebook: "",
     description: "",
     imageFiles: [],
+    success: false,
   };
 
   changeState = (event) => {
@@ -51,13 +52,30 @@ export default class PostForm extends React.Component {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(newPost),
-    }).then((post) => console.log(post));
+    }).then(() => {
+      this.setState({
+        company: "",
+        position: "",
+        location: "",
+        jobLink: "",
+        length: "",
+        instagram: "",
+        facebook: "",
+        description: "",
+        success: true,
+      });
+    });
   };
 
   render() {
     return (
       <div className={styles.formWrapper}>
-        <Form onSubmit={this.handleSubmit} size="small" className={styles.form}>
+        <Form
+          success={this.state.success ? "success" : ""}
+          onSubmit={this.handleSubmit}
+          size="small"
+          className={styles.form}
+        >
           <Form.Field
             onChange={this.changeState}
             id="form-input-control-last-name"
@@ -65,6 +83,7 @@ export default class PostForm extends React.Component {
             label="Job Title"
             placeholder="Job Title"
             name="position"
+            value={this.state.position}
           />
           <Form.Group widths="equal">
             <Form.Field
@@ -74,6 +93,7 @@ export default class PostForm extends React.Component {
               control={Input}
               label="Company Name"
               placeholder="Company Name"
+              value={this.state.company}
             />
             <Form.Field
               onChange={this.changeState}
@@ -82,6 +102,7 @@ export default class PostForm extends React.Component {
               control={Input}
               label="Location"
               placeholder="Location"
+              value={this.state.location}
             />
           </Form.Group>
           <Form.Field>
@@ -90,6 +111,7 @@ export default class PostForm extends React.Component {
               placeholder="Application Link/Email"
               name="jobLink"
               onChange={this.changeState}
+              value={this.state.jobLink}
             />
           </Form.Field>
           <Form.Field>
@@ -98,6 +120,7 @@ export default class PostForm extends React.Component {
               placeholder="Instagram Link"
               name="instagram"
               onChange={this.changeState}
+              value={this.state.instagram}
             />
           </Form.Field>
           <Form.Field>
@@ -106,51 +129,59 @@ export default class PostForm extends React.Component {
               placeholder="Facebook Link"
               name="facebook"
               onChange={this.changeState}
+              value={this.state.facebook}
             />
           </Form.Field>
+          <Form.Group widths="equal">
+            <Form.Field>
+              <Radio
+                label="Freelance"
+                name="radioGroup"
+                length="Freelance"
+                checked={this.state.length === "Freelance"}
+                onChange={this.changeStateWithButton}
+              />
+            </Form.Field>
+            <Form.Field>
+              <Radio
+                label="Permanant"
+                name="radioGroup"
+                length="Permanent"
+                checked={this.state.length === "Permanent"}
+                onChange={this.changeStateWithButton}
+              />
+            </Form.Field>
 
-          <Form.Field>Freelance/Perm</Form.Field>
-          <Form.Field>
-            <Radio
-              label="Choose this"
-              name="radioGroup"
-              length="Freelance"
-              checked={this.state.length === "Freelance"}
-              onChange={this.changeStateWithButton}
-            />
-          </Form.Field>
-          <Form.Field>
-            <Radio
-              label="Or that"
-              name="radioGroup"
-              length="Permanent"
-              checked={this.state.length === "Permanent"}
-              onChange={this.changeStateWithButton}
-            />
-          </Form.Field>
-
-          <Form.Field label="Image Upload" control="button">
-            <input
-              type="file"
-              name="imageFiles"
-              onChange={this.changeState}
-              multiple
-            />
-          </Form.Field>
+            <Form.Field
+              className={styles.imageUpload}
+              label="Image Upload"
+              control="button"
+            >
+              <input
+                type="file"
+                name="imageFiles"
+                onChange={this.changeState}
+                multiple
+                value={this.state.imageFiles}
+              />
+            </Form.Field>
+          </Form.Group>
           <Form.Field
             onChange={this.changeState}
             name="description"
             label="Job Description"
             control="textarea"
             rows="3"
+            value={this.state.description}
           />
           <Form.Field name="">
             <Checkbox label="I agree to the Terms and Conditions" />
           </Form.Field>
+
           <Message
             success
             header="Form Completed"
-            content="You're all signed up for the newsletter"
+            content="This will be approved by an admin and added to the site wihthin 3-5 days"
           />
           <Button type="submit">Submit</Button>
         </Form>
