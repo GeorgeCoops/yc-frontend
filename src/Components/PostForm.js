@@ -1,5 +1,12 @@
 import React from "react";
-import { Button, Checkbox, Form, Input, Radio } from "semantic-ui-react";
+import {
+  Message,
+  Button,
+  Checkbox,
+  Form,
+  Input,
+  Radio,
+} from "semantic-ui-react";
 
 import styles from "../css/PostForm.module.css";
 
@@ -140,6 +147,11 @@ export default class PostForm extends React.Component {
           <Form.Field name="">
             <Checkbox label="I agree to the Terms and Conditions" />
           </Form.Field>
+          <Message
+            success
+            header="Form Completed"
+            content="You're all signed up for the newsletter"
+          />
           <Button type="submit">Submit</Button>
         </Form>
       </div>

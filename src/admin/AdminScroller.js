@@ -13,6 +13,7 @@ export default class AdminScroller extends Component {
             job={job}
             key={job.id}
             clickedPost={this.props.clickedPost}
+            deletePost={this.props.deletePost}
           />
         ))}
       </div>

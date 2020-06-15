@@ -21,6 +21,20 @@
   padding: 15px;
 }
 
+.AdminLogIn {
+  background-color: white;
+  width: 25%;
+  padding: 50px;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: left;
+}
+
+.AdminLogInWrapper {
+  text-align: center;
+  padding: 11% 0 0 0;
+}
+
 /* .border {
   padding: 0px 0px 0px 50px;
   flex-direction: row;

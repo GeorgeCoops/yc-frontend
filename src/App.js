@@ -8,10 +8,8 @@ import NavBar from "./Components/NavBar";
 
 import AboutContainer from "./Containers/AboutContainer";
 import JobSearchContainer from "./Containers/JobSearchContainer";
-import ArticlesContainer from "./Containers/ArticlesContainer";
 import PostContainer from "./Containers/PostContainer";
 import AdminPage from "./admin/AdminPage";
-import AdminLogIn from "./admin/AdminLogIn";
 
 export default class App extends Component {
   render() {
@@ -28,7 +26,6 @@ export default class App extends Component {
           /> */}
           <Route exact path="/post" component={() => <PostContainer />} />
           <Route exact path="/about" component={() => <AboutContainer />} />
-          <Route exact path="/admin/login" component={() => <AdminLogIn />} />
           <Route exact path="/admin" component={() => <AdminPage />} />
         </Router>
       </div>

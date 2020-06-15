@@ -1,15 +1,88 @@
 .JobContainer {
-  width: 30%;
-  /* border-radius: 25px; */
+  width: 40%;
   background-color: white;
   padding: 15px;
-  overflow: scroll;
-  height: 80vh;
-  min-width: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  min-width: 400px;
+  height: 75vh;
+}
+
+.JobContainerBorder {
+  height: 81vh;
+  width: 40%;
+  min-width: 400px;
+  padding: 2vh 0px 2vh 0px;
+  border-radius: 2vh;
+  background: white;
+}
+
+.jobPost {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .spreader {
-  padding: 0px 0px 0px 15px;
+  padding: 0px 0px 0px 30px;
   overflow: hidden;
   display: flex;
+}
+
+.postPosition {
+  margin-top: 15px;
+  margin-bottom: 1px;
+  font-size: 150%;
+  padding: 0px;
+  line-height: 1;
+}
+
+.postCompany {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.postDetails {
+  color: grey;
+  padding: 0 0 15px 0;
+}
+
+.lineBreak {
+  border: none;
+  border-top: 2px dotted lightgrey;
+  color: #fff;
+  background-color: #fff;
+  height: 1px;
+  width: 100%;
+}
+
+.filterButton {
+  width: 150px;
+  height: 35px;
+  float: right;
+}
+
+.display {
+  /* float: right; */
+  border-radius: 3px;
+  width: 60%;
+  background-color: white;
+  height: 35px;
+  margin: 0 0 10px 0;
+  /* display: inline-block; */
+}
+
+.currentlyShowing {
+  color: grey;
+  position: absolute;
+  padding: 0 0 0 7px;
+  font-size: 8.5pt;
+}
+
+.jobType {
+  float: right;
+  font-size: 13pt;
+  font-weight: 40pt;
+  font-family: "Roboto";
+  font-weight: 600;
+  padding: 13px 4px 0 0;
 }
