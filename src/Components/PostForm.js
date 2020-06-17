@@ -8,8 +8,8 @@ import {
   Radio,
 } from "semantic-ui-react";
 
-import { CloudinaryContext, Image } from "cloudinary-react";
-import { fetchPhotos, openUploadWidget } from "./CloudinaryService";
+import { CloudinaryContext } from "cloudinary-react";
+import { openUploadWidget } from "./CloudinaryService";
 
 import styles from "../css/PostForm.module.css";
 

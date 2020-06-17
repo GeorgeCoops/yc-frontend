@@ -1,6 +1,13 @@
 .appBasic {
   background-color: #1a1a1a;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  padding: 0;
+}
+
+.appBasic2 {
+  background-color: #f5afba;
+  width: 100%;
+  height: 202vh;
   padding: 0;
 }

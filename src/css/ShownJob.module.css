@@ -81,9 +81,8 @@
 }
 
 .apply {
-  position: fixed;
+  position: absolute;
   font-size: 50pt;
-  /* padding: 575px 0 0 170px; */
   top: 82%;
   left: 56%;
   font-family: "Roboto";
