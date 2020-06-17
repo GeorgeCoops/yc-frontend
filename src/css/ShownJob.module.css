@@ -22,7 +22,7 @@
   color: #1a1a1a;
   position: absolute;
   top: 19px;
-  left: 30%;
+  left: 50%;
   font-size: 110pt;
   z-index: 3;
   -webkit-text-fill-color: transparent;
@@ -34,7 +34,29 @@
   color: #1a1a1a;
   position: absolute;
   top: 18px;
-  left: 30%;
+  left: 50%;
+  font-size: 110pt;
+  -webkit-text-stroke-width: 3px;
+  z-index: 1;
+}
+
+.headerColor {
+  color: #fee902;
+  position: absolute;
+  top: 19px;
+  left: 50%;
+  font-size: 110pt;
+  z-index: 3;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+}
+
+.header2Color {
+  overflow: hidden;
+  color: #fee902;
+  position: absolute;
+  top: 18px;
+  left: 50%;
   font-size: 110pt;
   -webkit-text-stroke-width: 3px;
   z-index: 1;

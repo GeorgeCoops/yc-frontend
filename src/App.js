@@ -13,7 +13,8 @@ import AdminPage from "./admin/AdminPage";
 
 export default class App extends Component {
   state = {
-    scroll: false,
+    scroll: true,
+    colorToggle: false,
   };
 
   changeScrollStatusToLong = () => {
@@ -24,16 +25,43 @@ export default class App extends Component {
     this.setState({ scroll: true });
   };
 
+  toggleColor = (e) => {
+    e.preventDefault();
+    const value = !this.state.colorToggle;
+    this.setState({ colorToggle: value });
+  };
+
+  backgroundChoice = () => {
+    if (this.state.scroll) {
+      if (this.state.colorToggle) {
+        return styles.appBasicColour;
+      } else {
+        return styles.appBasic;
+      }
+    } else {
+      return styles.appBasicAdmin;
+    }
+  };
+
   render() {
     return (
       <Router>
-        <div className={this.state.scroll ? styles.appBasic : styles.appBasic2}>
+        <div className={this.backgroundChoice()}>
           <NavBar
             scrollChangeLong={this.changeScrollStatusToLong}
             scrollChangeShort={this.changeScrollStatusToShort}
           />
           <br></br>
-          <Route exact path="/" component={() => <JobSearchContainer />} />
+          <Route
+            exact
+            path="/"
+            component={() => (
+              <JobSearchContainer
+                color={this.state.colorToggle}
+                toggleColor={this.toggleColor}
+              />
+            )}
+          />
           <Route exact path="/post" component={() => <PostContainer />} />
           <Route exact path="/about" component={() => <AboutContainer />} />
           <Route exact path="/admin" component={() => <AdminPage />} />

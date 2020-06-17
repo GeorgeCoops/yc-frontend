@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
 import JobScroll from "../Components/JobScroll";
-
 import ShownJob from "../Components/ShownJob";
 
 import styles from "../css/JobContainer.module.css";
+import { Radio } from "semantic-ui-react";
 
 export default class JobSearchContainer extends Component {
   state = {
@@ -52,6 +52,8 @@ export default class JobSearchContainer extends Component {
       .then((images) => this.setState({ images: images }));
   };
 
+  handleChange = (e) => {};
+
   render() {
     return (
       <div className={styles.spreader}>
@@ -61,7 +63,17 @@ export default class JobSearchContainer extends Component {
           onFilterChange={this.onFilterChange}
           filterValue={this.state.filterValue}
         />
-        <ShownJob job={this.state.shownPost} images={this.imageFilter()} />
+        <ShownJob
+          job={this.state.shownPost}
+          images={this.imageFilter()}
+          color={this.props.color}
+        />
+        <Radio
+          toggle
+          checked={this.props.color}
+          onClick={this.props.toggleColor}
+          className={styles.toggle}
+        />
       </div>
     );
   }

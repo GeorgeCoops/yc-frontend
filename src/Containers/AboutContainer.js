@@ -3,11 +3,11 @@ import React, { Component } from "react";
 import styles from "../css/About.module.css";
 import ContactDetails from "../Components/ContactDetails";
 
-export default class AboutContainer extends Component {
-  youngCreatives = "YOUNGCREATIVES";
+const YOUNG_CREATIVES = "YOUNGCREATIVES";
 
+export default class AboutContainer extends Component {
   textBackground = () => {
-    return <p className={styles.scrollText}>{this.youngCreatives.repeat(5)}</p>;
+    return <p className={styles.scrollText}>{YOUNG_CREATIVES.repeat(5)}</p>;
   };
 
   render() {
@@ -35,8 +35,10 @@ export default class AboutContainer extends Component {
         <div className={styles.textWrapper}>
           <div className={styles.imageBackground}>
             <img
+              onLoad={this.vibrantCheck}
               className={styles.displayImage}
               alt=""
+              ref={this.imageRef}
               src={
                 "https://res.cloudinary.com/dh20yq9bc/image/upload/v1592390995/d9373748-5d30-4583-9be0-8118cc6be1a4_zqvypr.jpg"
               }

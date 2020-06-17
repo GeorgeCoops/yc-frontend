@@ -16,8 +16,12 @@ export default function ShownJob(props) {
         <a href={job.jobLink} target="_blank" rel="noopener noreferrer">
           <h2 className={styles.apply}>APPLY</h2>
         </a>
-        <h1 className={styles.header}>{reducedName.repeat(4)}</h1>
-        <h1 className={styles.header2}>{reducedName.repeat(4)}</h1>
+        <h1 className={props.color ? styles.header : styles.headerColor}>
+          {reducedName.repeat(4)}
+        </h1>
+        <h1 className={props.color ? styles.header2 : styles.header2Color}>
+          {reducedName.repeat(4)}
+        </h1>
         <Image
           className={styles.image}
           key={singleImages[0] ? singleImages[0].url : ""}

@@ -26,6 +26,7 @@
   padding: 0px 0px 0px 30px;
   overflow: hidden;
   display: flex;
+  height: 93%;
 }
 
 .postPosition {
@@ -98,4 +99,9 @@
 
 .modalWidth {
   width: 25px;
+}
+
+.toggle {
+  padding-right: 90%;
+  padding-top: 48.5%;
 }
