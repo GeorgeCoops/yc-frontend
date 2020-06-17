@@ -8,6 +8,9 @@
   flex-direction: column;
   float: left;
   padding: 15px;
+  margin: 0 15% 0 15%;
+  overflow-x: hidden;
+  border-radius: 10px;
 }
 
 .JobContainerR {
@@ -19,6 +22,8 @@
   display: flex;
   flex-direction: column;
   padding: 15px;
+  overflow-x: hidden;
+  border-radius: 10px;
 }
 
 .AdminLogIn {
@@ -34,9 +39,3 @@
   text-align: center;
   padding: 11% 0 0 0;
 }
-
-/* .border {
-  padding: 0px 0px 0px 50px;
-  flex-direction: row;
-  float: left;
-} */

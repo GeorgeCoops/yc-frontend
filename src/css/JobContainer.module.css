@@ -55,6 +55,17 @@
   width: 100%;
 }
 
+.lineBreak2 {
+  border: none;
+  border-top: 2px dotted lightgrey;
+  color: #fff;
+  background-color: #fff;
+  height: 1px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .filterButton {
   width: 150px;
   height: 35px;

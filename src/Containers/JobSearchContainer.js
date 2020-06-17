@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 import JobScroll from "../Components/JobScroll";
+
 import ShownJob from "../Components/ShownJob";
-import FiltersModal from "../Components/FiltersModal";
 
 import styles from "../css/JobContainer.module.css";
 

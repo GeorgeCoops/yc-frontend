@@ -1,7 +1,45 @@
-.basic {
+.topLine {
   color: white;
+  font-size: 60pt;
+  margin: 3%;
+  width: 75%;
 }
 
-.AdminLogIn {
-  background-color: white;
+.secondLine {
+  color: white;
+  font-size: 20pt;
+  margin: 3%;
+  width: 60%;
+  font-weight: lighter;
+  opacity: 40%;
 }
+
+.largeLogo {
+  position: absolute;
+  overflow: hidden;
+  height: 100vh;
+  opacity: 6%;
+  left: 40%;
+}
+
+.background {
+  height: 300vh;
+}
+
+.scrollText {
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  font-size: 60pt;
+  opacity: 60%;
+  /* animation: animate 30s linear infinite; */
+}
+
+/* @keyframes animate {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} */
