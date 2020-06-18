@@ -34,7 +34,7 @@ export default class JobSearchContainer extends Component {
         (job) => job.length === this.state.filterValue
       );
     }
-    return this.filterAcceptedPosts();
+    return this.filterAcceptedPosts().sort((a, b) => (a.id > b.id ? 1 : -1));
   };
 
   onFilterChange = (e) => {
@@ -44,7 +44,12 @@ export default class JobSearchContainer extends Component {
   componentDidMount = () => {
     fetch("http://localhost:3000/posts")
       .then((resp) => resp.json())
-      .then((jobs) => this.setState({ jobs: jobs, shownPost: jobs[0] }));
+      .then((jobs) =>
+        this.setState({
+          jobs: jobs,
+          shownPost: jobs.sort((a, b) => (a.id > b.id ? 1 : -1))[0],
+        })
+      );
     // .then((jobs) => console.log(jobs));
 
     fetch("http://localhost:3000/post_images")
@@ -72,6 +77,7 @@ export default class JobSearchContainer extends Component {
           toggle
           checked={this.props.color}
           onClick={this.props.toggleColor}
+          readOnly={false}
           className={styles.toggle}
         />
       </div>
