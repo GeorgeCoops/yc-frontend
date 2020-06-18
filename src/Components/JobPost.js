@@ -11,9 +11,9 @@ export default function JobPost(props) {
       from={{ opacity: 0, marginTop: -500 }}
       to={{ opacity: 1, marginTop: 0 }}
     >
-      {(props) => (
+      {(springProps) => (
         <div
-          style={props}
+          style={springProps}
           className={styles.jobPost}
           onClick={() => props.clickedPost(job)}
         >

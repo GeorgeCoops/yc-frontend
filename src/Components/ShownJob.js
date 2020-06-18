@@ -41,23 +41,44 @@ export default function ShownJob(props) {
         </Spring>
         <div className={styles.ShownJob}>
           <div className={styles.shownText}>
-            <h2 className={styles.position}>{job.position}</h2>
-            <hr className={styles.line} />
-            <h3 className={styles.company}>
-              {job.company} - {job.location} - {job.length}
-            </h3>
-            <p className={styles.description}>{job.description}</p>
-            <div className={styles.icons}>
-              <a href={job.facebook} target="_blank" rel="noopener noreferrer">
-                <Icon name="facebook" size="large" />
-              </a>
-              <a href={job.instagram} target="_blank" rel="noopener noreferrer">
-                <Icon name="instagram" size="large" />
-              </a>
-              <a href={job.facebook} target="_blank" rel="noopener noreferrer">
-                <Icon name="google" size="large" />
-              </a>
-            </div>
+            <Spring
+              from={{ opacity: 0, marginTop: -500 }}
+              to={{ opacity: 1, marginTop: 0 }}
+            >
+              {(springProps) => (
+                <div style={springProps}>
+                  <h2 className={styles.position}>{job.position}</h2>
+                  <hr className={styles.line} />
+                  <h3 className={styles.company}>
+                    {job.company} - {job.location} - {job.length}
+                  </h3>
+                  <p className={styles.description}>{job.description}</p>
+                  <div className={styles.icons}>
+                    <a
+                      href={job.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Icon name="facebook" size="large" />
+                    </a>
+                    <a
+                      href={job.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Icon name="instagram" size="large" />
+                    </a>
+                    <a
+                      href={job.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Icon name="google" size="large" />
+                    </a>
+                  </div>
+                </div>
+              )}
+            </Spring>
           </div>
         </div>
       </div>
