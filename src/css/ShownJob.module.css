@@ -1,11 +1,118 @@
 .ShownJob {
   background-color: white;
   flex: right;
-  width: 700px;
-  height: 80vh;
-  overflow: scroll;
+  width: 800px;
+  height: 88vh;
+  overflow: hidden;
+  padding: 25% 0% 0% 50%;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.shownText {
+  float: right;
+  color: white;
+  padding: 35px;
+  background-color: #1a1a1a;
+  border-radius: 10px 0px 0px 10px;
+  height: 95%;
+  width: 400px;
+}
+
+.header {
+  color: #1a1a1a;
+  position: absolute;
+  top: 19px;
+  left: 50%;
+  font-size: 110pt;
+  z-index: 3;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+}
+
+.header2 {
+  overflow: hidden;
+  color: #1a1a1a;
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  font-size: 110pt;
+  -webkit-text-stroke-width: 3px;
+  z-index: 1;
+}
+
+.headerColor {
+  color: #7b39ff;
+  position: absolute;
+  top: 19px;
+  left: 50%;
+  font-size: 110pt;
+  z-index: 3;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+}
+
+.header2Color {
+  overflow: hidden;
+  color: #7b39ff;
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  font-size: 110pt;
+  -webkit-text-stroke-width: 3px;
+  z-index: 1;
 }
 
 .spreeder {
-  padding: 0px 0px 0px 300px;
+  padding: 0% 0px 0px 27%;
+}
+
+.image {
+  height: 70vh;
+  width: 70vh;
+  position: absolute;
+  object-fit: cover;
+  z-index: 2;
+  top: 13%;
+  left: 33%;
+  filter: brightness(115%);
+}
+
+.line {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 5px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.company {
+  font-size: medium;
+}
+
+.position {
+  font-size: x-large;
+}
+
+.description {
+  font-size: x-small;
+}
+
+.icons {
+  float: bottom;
+}
+
+.apply {
+  position: absolute;
+  font-size: 50pt;
+  top: 82%;
+  left: 56%;
+  font-family: "Roboto";
+  font-weight: 800;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.apply:hover {
+  transform: scale(1.1);
 }
