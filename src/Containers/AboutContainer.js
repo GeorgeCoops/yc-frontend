@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import styles from "../css/About.module.css";
 import ContactDetails from "../Components/ContactDetails";
+import { Spring } from "react-spring/renderprops";
 
 const YOUNG_CREATIVES = "YOUNGCREATIVES";
 
@@ -13,15 +14,29 @@ export default class AboutContainer extends Component {
   render() {
     return (
       <div>
-        <h1 className={styles.topLine}>
-          jobs and content for skilled creative young people.
-        </h1>
-        <p className={styles.secondLine}>
-          young people’s valuable skillsets are underused. here we find the best
-          junior level jobs with low experience needs. freelance jobs are paid
-          by job, not by hour. apply directly to the business, no sign up
-          required.
-        </p>
+        <Spring
+          from={{ opacity: 0, marginLeft: -500 }}
+          to={{ opacity: 1, marginLeft: 50 }}
+        >
+          {(props) => (
+            <h1 className={styles.topLine} style={props}>
+              jobs and content for skilled creative young people.
+            </h1>
+          )}
+        </Spring>
+        <Spring
+          from={{ opacity: 0, marginLeft: 500 }}
+          to={{ opacity: 1, marginLeft: 50 }}
+        >
+          {(props) => (
+            <p className={styles.secondLine} style={props}>
+              young people’s valuable skillsets are underused. here we find the
+              best junior level jobs with low experience needs. freelance jobs
+              are paid by job, not by hour. apply directly to the business, no
+              sign up required.
+            </p>
+          )}
+        </Spring>
         <img
           className={styles.largeLogo}
           src="https://res.cloudinary.com/dh20yq9bc/image/upload/v1592322345/YC_LOGO_d4c2ur.png"

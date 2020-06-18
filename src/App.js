@@ -39,7 +39,11 @@ export default class App extends Component {
         return styles.appBasic;
       }
     } else {
-      return styles.appBasicAdmin;
+      if (this.state.colorToggle) {
+        return styles.appBasicAdminColor;
+      } else {
+        return styles.appBasicAdmin;
+      }
     }
   };
 

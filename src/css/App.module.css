@@ -6,7 +6,7 @@
 }
 
 .appBasicColour {
-  background-color: #fee902;
+  background-color: #7b39ff;
   width: 100%;
   height: 100vh;
   padding: 0;
@@ -14,6 +14,13 @@
 
 .appBasicAdmin {
   background-color: #1a1a1a;
+  width: 100%;
+  height: 204vh;
+  padding: 0;
+}
+
+.appBasicAdminColor {
+  background-color: #7b39ff;
   width: 100%;
   height: 204vh;
   padding: 0;

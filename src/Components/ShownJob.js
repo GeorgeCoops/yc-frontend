@@ -3,6 +3,7 @@ import React from "react";
 import { Icon } from "semantic-ui-react";
 import styles from "../css/ShownJob.module.css";
 import { CloudinaryContext, Image } from "cloudinary-react";
+import { Spring } from "react-spring/renderprops";
 
 export default function ShownJob(props) {
   const job = props.job;
@@ -22,14 +23,22 @@ export default function ShownJob(props) {
         <h1 className={props.color ? styles.header2 : styles.header2Color}>
           {reducedName.repeat(4)}
         </h1>
-        <Image
-          className={styles.image}
-          key={singleImages[0] ? singleImages[0].url : ""}
-          publicId={singleImages[0] ? singleImages[0].url : ""}
-          fetch-format="auto"
-          quality="auto"
-          src={singleImages[0] ? singleImages[0].url : ""}
-        />
+        <Spring
+          from={{ opacity: 0, marginTop: -500 }}
+          to={{ opacity: 1, marginTop: 0 }}
+        >
+          {(props) => (
+            <Image
+              style={props}
+              className={styles.image}
+              key={singleImages[0] ? singleImages[0].url : ""}
+              publicId={singleImages[0] ? singleImages[0].url : ""}
+              fetch-format="auto"
+              quality="auto"
+              src={singleImages[0] ? singleImages[0].url : ""}
+            />
+          )}
+        </Spring>
         <div className={styles.ShownJob}>
           <div className={styles.shownText}>
             <h2 className={styles.position}>{job.position}</h2>
